@@ -11,20 +11,6 @@ export function Hero() {
     >
       <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-16 px-6 md:grid-cols-[1.15fr_0.85fr] md:gap-10 md:px-10">
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-8 inline-flex items-center gap-2 border border-charcoal/30 px-3 py-1.5"
-          >
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal opacity-60" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-signal" />
-            </span>
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-charcoal">
-              15 Founding Client Spots
-            </span>
-          </motion.div>
 
           <h1 className="font-sans text-[44px] font-[650] leading-[1.03] tracking-[-0.02em] text-black sm:text-[56px] md:text-[76px] lg:text-[92px]">
             {headlineLines.map((line, i) => (
@@ -61,22 +47,14 @@ export function Hero() {
             className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
           >
             <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-              }}
+              href="/contact"
               className="group inline-flex items-center justify-center gap-2 border border-black bg-black px-7 py-4 text-[14px] font-medium text-ivory transition-colors duration-300 hover:bg-copper hover:border-copper"
             >
               Start a Project
               <span className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
             </a>
             <a
-              href="#services"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
-              }}
+              href="/services"
               className="group inline-flex items-center justify-center gap-2 border border-charcoal/30 px-7 py-4 text-[14px] font-medium text-black transition-colors duration-300 hover:border-black"
             >
               Explore What We Build

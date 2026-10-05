@@ -38,7 +38,7 @@ export function FinalCTA() {
 
         <Reveal delay={0.3} className="mt-14">
           <a
-            href="mailto:hello@phagentos.com"
+            href="/contact"
             className="group inline-flex items-center gap-2 border border-ivory bg-ivory px-8 py-4 text-[14px] font-medium text-black transition-colors duration-300 hover:bg-copper hover:border-copper"
           >
             Start a Project

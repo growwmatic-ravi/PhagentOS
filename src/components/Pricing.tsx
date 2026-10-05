@@ -4,16 +4,16 @@ import { Reveal, SectionLabel } from "./ui/Reveal";
 
 const pricing = {
   india: [
-    { name: "AI Agent", setup: "₹59,000 setup", rec: "₹9,999/mo" },
-    { name: "Voice AI", setup: "₹49,000 setup", rec: "₹11,999/mo" },
-    { name: "Web Development", setup: "₹65,000", rec: "one-time" },
-    { name: "Mobile Development", setup: "₹2,00,000 – ₹2,50,000", rec: "one-time" },
+    { name: "AI Agent", setup: "₹35,000 setup", rec: "₹4,999/mo" },
+    { name: "Voice AI", setup: "₹30,000 setup", rec: "₹4,999/mo" },
+    { name: "Web Development", setup: "₹20,000", rec: "one-time" },
+    { name: "Mobile Development", setup: "₹80,000", rec: "one-time" },
   ],
   intl: [
-    { name: "AI Agent", setup: "$1,250 setup", rec: "$249/mo" },
-    { name: "Voice AI", setup: "$1,000 setup", rec: "$199/mo" },
-    { name: "Web Development", setup: "$1,500", rec: "one-time" },
-    { name: "Mobile Development", setup: "$4,500", rec: "one-time" },
+    { name: "AI Agent", setup: "$1,500 setup", rec: "$149/mo" },
+    { name: "Voice AI", setup: "$1,500 setup", rec: "$149/mo" },
+    { name: "Web Development", setup: "$700", rec: "one-time" },
+    { name: "Mobile Development", setup: "$2,000", rec: "one-time" },
   ],
 };
 
@@ -98,10 +98,10 @@ export function Pricing() {
 
         <Reveal delay={0.15} className="mt-14">
           <a
-            href="#contact"
+            href="/pricing"
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+              window.location.assign("/pricing");
             }}
             className="group inline-flex items-center gap-2 border-b border-black pb-1 text-[15px] font-medium text-black transition-colors duration-300 hover:border-copper hover:text-copper"
           >

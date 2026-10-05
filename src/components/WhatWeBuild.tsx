@@ -8,26 +8,30 @@ const capabilities = [
     title: "AI Employees",
     copy: "Digital workers designed around your actual operations.",
     visual: "grid",
+    link: "/services#ai-employees"
   },
   {
     n: "02",
     title: "Voice AI",
     copy: "Inbound and outbound voice systems that handle conversations at scale.",
     visual: "wave",
+    link: "/services#voice-ai"
   },
   {
     n: "03",
     title: "Digital Products",
     copy: "Websites and applications designed around real business requirements.",
     visual: "frame",
+    link: "/services#digital-products"
   },
   {
     n: "04",
     title: "Custom Systems",
     copy: "Intelligent systems connecting workflows, tools, data and people.",
     visual: "network",
+    link: "/services#custom-systems"
   },
-] as const;
+];
 
 function CapabilityVisual({ type, active }: { type: string; active: boolean }) {
   const stroke = active ? "#C47F5A" : "#2A2926";
@@ -109,8 +113,9 @@ export function WhatWeBuild() {
 
         <div className="mt-20 border-t border-charcoal/15 md:mt-28">
           {capabilities.map((c, i) => (
-            <motion.div
+            <motion.a
               key={c.n}
+              href={c.link}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
@@ -142,7 +147,7 @@ export function WhatWeBuild() {
                   </span>
                 </span>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
